@@ -1,0 +1,98 @@
+[
+    {
+        "recipie_img": "https://i.ibb.co.com/DzxMdxy/salmon-1485014-1280.jpg",
+        "recipie_id": "001",
+        "name": "Teriyaki Chicken",
+        "short_des": "A sweet and savory chicken dish with a rich teriyaki glaze.",
+        "ingredients": [
+            "550 g chicken",
+            "120 ml soy sauce",
+            "100 g brown sugar",
+            "50 ml rice vinegar",
+            "2 cloves garlic, minced",
+            "1 tsp ginger, grated"
+        ],
+        "preparing_time": "30 min",
+        "calories": "320 calories"
+    },
+    {
+        "recipie_img": "https://i.ibb.co.com/LkYv3fL/salmon-518032-1280.jpg",
+        "recipie_id": "002",
+        "name": "Pasta Primavera",
+        "short_des": "A colorful pasta dish loaded with fresh vegetables.",
+        "ingredients": [
+            "250 g pasta",
+            "200 g bell peppers, sliced",
+            "100 g zucchini, diced",
+            "100 g cherry tomatoes, halved",
+            "50 g parmesan cheese",
+            "2 tbsp olive oil"
+        ],
+        "preparing_time": "25 min",
+        "calories": "450 calories"
+    },
+    {
+        "recipie_img": "https://i.ibb.co.com/58hht15/spring-roll-6760871-1280-1.jpg",
+        "recipie_id": "003",
+        "name": "Mushroom Risotto",
+        "short_des": "Creamy risotto cooked with mushrooms and herbs.",
+        "ingredients": [
+            "200 g arborio rice",
+            "400 g mushroom, sliced",
+            "1 onion, chopped",
+            "1 liter vegetable broth",
+            "100 ml white wine",
+            "50 g parmesan cheese"
+        ],
+        "preparing_time": "35 min",
+        "calories": "500 calories"
+    },
+    {
+        "recipie_img": "https://i.ibb.co.com/1fSV3t0/spring-rolls-2186506-1280.jpg",
+        "recipie_id": "004",
+        "name": "Greek Salad",
+        "short_des": "A refreshing salad with feta cheese and olives.",
+        "ingredients": [
+            "150 g cucumber, diced",
+            "100 g tomatoes, chopped",
+            "50 g feta cheese, crumbled",
+            "30 g black olives",
+            "2 tbsp olive oil",
+            "1 tbsp lemon juice"
+        ],
+        "preparing_time": "10 min",
+        "calories": "250 calories"
+    },
+    {
+        "recipie_img": "https://i.ibb.co.com/58hht15/spring-roll-6760871-1280-1.jpg",
+        "recipie_id": "005",
+        "name": "Beef Tacos",
+        "short_des": "Spicy beef tacos with fresh toppings.",
+        "ingredients": [
+            "400 g ground beef",
+            "8 taco shells",
+            "100 g lettuce, shredded",
+            "100 g tomatoes, diced",
+            "50 g cheese, shredded",
+            "2 tbsp salsa"
+        ],
+        "preparing_time": "20 min",
+        "calories": "600 calories"
+    },
+    {
+        "recipie_img": "https://i.ibb.co.com/xLwqRj9/top-view-vegetable-soup-with-fresh-vegetables-seasonings-dark-green-desk-ingredient-meal-vegetable-s.jpg",
+        "recipie_id": "006",
+        "name": "Chocolate Chip Cookies",
+        "short_des": "Classic cookies with gooey chocolate chips.",
+        "ingredients": [
+            "250 g flour",
+            "150 g sugar",
+            "100 g butter, softened",
+            "1 egg",
+            "150 g chocolate chips",
+            "1 tsp vanilla extract"
+        ],
+        "preparing_time": "15 min",
+        "calories": "200 calories"
+    }
+]
