@@ -1,6 +1,9 @@
 import React from 'react';
 
-const OurRecipie = () => {
+const OurRecipies = () => {
+
+
+    
     return (
         <div className='flex items-center gap-4 text-center w-[80%] mx-auto flex-col mt-16'>
             <h3 className='font-bold text-black text-3xl'>Our Recipes</h3>
@@ -9,4 +12,4 @@ const OurRecipie = () => {
     );
 };
 
-export default OurRecipie;
+export default OurRecipies;
