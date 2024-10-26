@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import Recipie from './Recipie';
-const Recipies = () => {
+const Recipies = ({addRecipieQueue}) => {
 
 const [recipies, setRecipies] = useState([])
 
@@ -19,7 +19,7 @@ useEffect(()=>{
         
 {
 
-recipies.map(recipie=> <Recipie key={recipie.recipie_id} recipie={recipie}></Recipie>)
+recipies.map(recipie=> <Recipie key={recipie.recipie_id} recipie={recipie} addRecipieQueue={addRecipieQueue}></Recipie>)
 
 
     }
@@ -33,7 +33,8 @@ recipies.map(recipie=> <Recipie key={recipie.recipie_id} recipie={recipie}></Rec
 
 Recipies.proptypes={
 
-recipies: PropTypes.array
+recipies: PropTypes.array,
+addRecipieQueue: PropTypes.func.isRequired
 }
 
 export default Recipies;

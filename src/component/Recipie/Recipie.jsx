@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const Recipie = ({recipie}) => {
+const Recipie = ({recipie, addRecipieQueue}) => {
 
 const { short_des, name, ingredients,recipie_img, preparing_time, calories} = recipie;
 
@@ -28,11 +28,11 @@ ingredients.map((item,index)=>(
     )}
 </ul>
    <div className='flex flex-row  gap-8 text-gray-700 text-sm mt-2 mb-4 border-t-2'>
-    <p className='flex flex-row items-center gap-2 mt-2'><i class="fa-regular fa-clock"></i>{preparing_time}</p>
+    <p className='flex flex-row items-center gap-2 mt-2'><i class="fa-regular fa-clock"></i>{preparing_time} minutes</p>
     <p className='flex items-center gap-2 mt-2'><i class="fa-solid fa-fire"></i>{calories}</p>
    </div>
     <div class="card-actions">
-      <button class="btn rounded-full bg-[#0BE58A]">Want to Cook</button>
+      <button onClick={()=>addRecipieQueue(recipie)} class="btn rounded-full bg-[#0BE58A]">Want to Cook</button>
     </div>
   </div>
 
@@ -42,7 +42,8 @@ ingredients.map((item,index)=>(
 };
 
 Recipie.propTypes={
-    recipie: PropTypes.array
+    recipie: PropTypes.array,
+    addRecipieQueue: PropTypes.func.isRequired
 }
 
 
