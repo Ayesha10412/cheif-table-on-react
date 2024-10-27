@@ -35,10 +35,16 @@ const updatedQueue = recipieQueue.filter(recipe=> recipe.recipie_id!==id)
 setRecipieQueue(updatedQueue)
 setPreparedRecipie([...preparedRecipie, deleteRecipe])
 
-
-
 }
 
+const [totalTime, setTotalTime] = useState(0)
+
+const [totalCalories, setTotalCalories] = useState(0)
+
+const calculateTimeandCalories = (time, calorie)=>{
+setTotalTime(totalTime + time)
+setTotalCalories(totalCalories + calorie)
+}
 
   return (
     <>
@@ -59,7 +65,9 @@ setPreparedRecipie([...preparedRecipie, deleteRecipe])
       {/* sidebar */}
 
 <Sidebar recipieQueue={recipieQueue} handleCurrentCooking={handleCurrentCooking} 
-preparedRecipie={preparedRecipie}></Sidebar>
+preparedRecipie={preparedRecipie}
+ calculateTimeandCalories={calculateTimeandCalories}
+ totalTime={totalTime} totalCalories={totalCalories}></Sidebar>
 
     </section>
 </div>

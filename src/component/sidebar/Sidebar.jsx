@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-const Sidebar = ({recipieQueue, handleCurrentCooking, preparedRecipie}) => {
+const Sidebar = ({recipieQueue, handleCurrentCooking, preparedRecipie,
+   calculateTimeandCalories, totalTime, totalCalories}) => {
 
 
     return (
@@ -27,7 +28,9 @@ const Sidebar = ({recipieQueue, handleCurrentCooking, preparedRecipie}) => {
         <td>{recipie.name}</td>
         <td> {recipie.preparing_time} </td>
         <td> {recipie.calories} </td>
-        <td><button onClick={()=>handleCurrentCooking(recipie.recipie_id)} className='btn bg-[#0BE58A] text-black font-bold text-xs rounded-full'>Preparing</button></td>
+        <td><button onClick={()=>{handleCurrentCooking(recipie.recipie_id)
+          calculateTimeandCalories(recipie.preparing_time,recipie.calories)
+        }} className='btn bg-[#0BE58A] text-black font-bold text-xs rounded-full'>Preparing</button></td>
       </tr>)
     }
       
@@ -59,6 +62,12 @@ const Sidebar = ({recipieQueue, handleCurrentCooking, preparedRecipie}) => {
         className='btn bg-[#0BE58A] text-black font-bold text-xs rounded-full'>Preparing</button></td> */}
       </tr>)
     }
+    <tr className='border-none'>
+    <th></th>
+        <td></td>
+        <td> Total Time = {totalTime} </td>
+        <td> Total Calories = {totalCalories} </td>
+    </tr>
       
     </tbody>
   </table>
@@ -72,8 +81,9 @@ const Sidebar = ({recipieQueue, handleCurrentCooking, preparedRecipie}) => {
 
 Sidebar.prototype={
     recipieQueue: PropTypes.object.isRequired,
-    handleCurrentCooking: PropTypes.func,
-    preparedRecipie: PropTypes.object.isRequired
+    handleCurrentCooking: PropTypes.func.isRequired,
+    preparedRecipie: PropTypes.object.isRequired,
+    calculateTimeandCalories: PropTypes.func.isRequired
 }
 
 export default Sidebar;
