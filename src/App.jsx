@@ -25,7 +25,20 @@ else{
 }
 
 }
-console.log(recipieQueue)
+const [preparedRecipie, setPreparedRecipie] = useState([])
+
+const handleCurrentCooking= id =>{
+// find which recipe to remove
+const deleteRecipe = recipieQueue.find(recipe=> recipe.recipie_id === id)
+// remove from want to cook table
+const updatedQueue = recipieQueue.filter(recipe=> recipe.recipie_id!==id)
+setRecipieQueue(updatedQueue)
+setPreparedRecipie([...preparedRecipie, deleteRecipe])
+
+
+
+}
+
 
   return (
     <>
@@ -45,7 +58,8 @@ console.log(recipieQueue)
 
       {/* sidebar */}
 
-<Sidebar recipieQueue={recipieQueue}></Sidebar>
+<Sidebar recipieQueue={recipieQueue} handleCurrentCooking={handleCurrentCooking} 
+preparedRecipie={preparedRecipie}></Sidebar>
 
     </section>
 </div>
